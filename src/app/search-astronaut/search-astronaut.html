@@ -1,0 +1,28 @@
+<div class="search-container">
+  <section class="search-form">
+    <form (ngSubmit)="getAstronaut()">
+      <p>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" [(ngModel)]="inputName" />
+      </p>
+      <p>
+        <button type="submit">Find</button>
+      </p>
+    </form>
+  </section>
+  <section class="astronaut-info">
+    @if (!showError() && astronaut(); as a) {
+      <app-display-astronaut [astronaut]="a" />
+      @if (astronautDuties()) {
+        @for (astronautDuty of astronautDuties(); track astronautDuty.id) {
+          <app-display-astronaut-duty [astronautDuty]="astronautDuty" />
+        }
+      }
+    } @else if (showError()) {
+      <article>
+        <header>ERROR!</header>
+        <p>{{ errorMessage() }}</p>
+      </article>
+    }
+  </section>
+</div>

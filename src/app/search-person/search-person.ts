@@ -22,7 +22,7 @@ export class SearchPerson {
   getPerson() {
     this.searchedName = this.inputName;
     const subscription = this.httpClient
-      .get<{ person: Person }>(`http://localhost:5204/person/${this.inputName}`)
+      .get<{ person: Person }>(`http://localhost:5204/person/${this.searchedName}`)
       .subscribe({
         next: (resData) => {
           this.showError.set(false);
