@@ -1,0 +1,44 @@
+<div>
+  <section class="input-section">
+    <form (ngSubmit)="createAstronaut()">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" [(ngModel)]="astronaut.name" />
+      </div>
+      <div class="form-group">
+        <label for="rank">Rank:</label>
+        <input type="text" id="rank" name="rank" [(ngModel)]="astronaut.rank" />
+      </div>
+      <div class="form-group">
+        <label for="duty-title">Duty Title:</label>
+        <input type="text" id="duty-title" name="duty-title" [(ngModel)]="astronaut.dutyTitle" />
+      </div>
+      <div class="form-group">
+        <label for="duty-end-date">Duty End Date:</label>
+        <input type="datetime-local" id="date" name="date" [(ngModel)]="dutyEndDate" />
+      </div>
+      <div class="form-group">
+        <button type="submit">Create Astronaut Duty</button>
+      </div>
+    </form>
+  </section>
+  <section class="post-result-section">
+    @if (success() && errorMsg() === '') {
+      <article>
+        <header>
+          <h2>Astronaut Created!</h2>
+          <p>Name: {{ createdAstronautName }}</p>
+          <p>Rank: {{ createdAstronautRank }}</p>
+          <p>Astronaut Duty Title: {{ createdAstronautDutyTitle }}</p>
+        </header>
+      </article>
+    } @else if (errorMsg() !== '') {
+      <article>
+        <header>
+          <h2>ERROR!</h2>
+          <p>{{ errorMsg() }}</p>
+        </header>
+      </article>
+    }
+  </section>
+</div>
