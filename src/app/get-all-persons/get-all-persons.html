@@ -1,0 +1,11 @@
+<section>
+  @if (people()?.length === 0) {
+    <section class="no-people">
+      <h2>Whoops, we don't have any people yet!</h2>
+    </section>
+  } @else {
+    @for (person of people(); track person.personId) {
+      <app-display-person [person]="person" />
+    }
+  }
+</section>
