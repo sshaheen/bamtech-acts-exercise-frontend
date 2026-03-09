@@ -27,7 +27,7 @@ export class CreateAstronaut {
   createdAstronautRank = '';
   createdAstronautDutyTitle = '';
 
-  dutyEndDate = '';
+  dutyStartDate = '';
 
   success = signal(false);
   errorMsg = signal('');
@@ -36,7 +36,7 @@ export class CreateAstronaut {
   private destroyRef = inject(DestroyRef);
 
   createAstronaut() {
-    const dateVal = new Date(this.dutyEndDate);
+    const dateVal = new Date(this.dutyStartDate);
     this.astronaut.dutyStartDate = dateVal.toISOString();
     this.createdAstronautName = this.astronaut.name;
     this.createdAstronautRank = this.astronaut.rank;
