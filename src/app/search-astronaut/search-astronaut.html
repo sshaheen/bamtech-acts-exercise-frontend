@@ -12,10 +12,14 @@
   </section>
   <section class="astronaut-info">
     @if (!showError() && astronaut(); as a) {
-      <app-display-astronaut [astronaut]="a" />
+      <div class="astronaut-header">
+        <app-display-astronaut [astronaut]="a" />
+      </div>
       @if (astronautDuties()) {
         @for (astronautDuty of astronautDuties(); track astronautDuty.id) {
-          <app-display-astronaut-duty [astronautDuty]="astronautDuty" />
+          <div class="astronaut-duty">
+            <app-display-astronaut-duty [astronautDuty]="astronautDuty" />
+          </div>
         }
       }
     } @else if (showError()) {

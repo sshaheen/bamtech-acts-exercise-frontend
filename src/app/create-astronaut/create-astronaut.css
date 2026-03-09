@@ -1,0 +1,31 @@
+.create-astronaut-container {
+  display: flex;
+  column-gap: 20px;
+}
+
+.input-section {
+  flex: 1;
+  border: 3px hotpink;
+  font-family: 'Courier New', Courier, monospace;
+  display: grid;
+  gap: 1rem;
+  padding-left: 100px;
+}
+
+.input-section p {
+  display: grid;
+}
+
+.input-section input,
+button {
+  width: 50%;
+}
+
+.post-result-section {
+  flex: 1;
+  padding-right: 100px;
+}
+
+button {
+  font-family: 'Courier New', Courier, monospace;
+}

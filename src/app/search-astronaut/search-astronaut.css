@@ -23,11 +23,15 @@ button {
 
 .astronaut-info {
   flex: 1;
-  padding-right: 100px;
+  padding-right: 300px;
 }
 
-input {
-  width: 100%;
+.astronaut-header {
+  padding-bottom: 40px;
+}
+
+.astronaut-duty {
+  padding-bottom: 10px;
 }
 
 button {

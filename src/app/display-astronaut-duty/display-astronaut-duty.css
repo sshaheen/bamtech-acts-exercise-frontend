@@ -5,7 +5,6 @@ article {
   transition: 0.3s;
   background-color: lightgreen;
   padding: 2px 16px;
-  height: 50%;
 }
 
 article:hover {

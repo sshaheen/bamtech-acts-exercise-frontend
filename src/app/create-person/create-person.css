@@ -1,0 +1,31 @@
+.create-person-container {
+  display: flex;
+  column-gap: 20px;
+}
+
+.create-form {
+  flex: 1;
+  border: 3px hotpink;
+  font-family: 'Courier New', Courier, monospace;
+  display: grid;
+  gap: 1rem;
+  padding-left: 100px;
+}
+
+p {
+  display: grid;
+}
+
+.create-form input,
+button {
+  width: 50%;
+}
+
+.result-info {
+  flex: 1;
+  padding-right: 100px;
+}
+
+button {
+  font-family: 'Courier New', Courier, monospace;
+}

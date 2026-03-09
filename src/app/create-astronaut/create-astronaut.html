@@ -1,25 +1,25 @@
-<div>
+<div class="create-astronaut-container">
   <section class="input-section">
     <form (ngSubmit)="createAstronaut()">
-      <div class="form-group">
+      <p>
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" [(ngModel)]="astronaut.name" />
-      </div>
-      <div class="form-group">
+      </p>
+      <p>
         <label for="rank">Rank:</label>
         <input type="text" id="rank" name="rank" [(ngModel)]="astronaut.rank" />
-      </div>
-      <div class="form-group">
+      </p>
+      <p>
         <label for="duty-title">Duty Title:</label>
         <input type="text" id="duty-title" name="duty-title" [(ngModel)]="astronaut.dutyTitle" />
-      </div>
-      <div class="form-group">
+      </p>
+      <p>
         <label for="duty-end-date">Duty End Date:</label>
         <input type="datetime-local" id="date" name="date" [(ngModel)]="dutyEndDate" />
-      </div>
-      <div class="form-group">
+      </p>
+      <p>
         <button type="submit">Create Astronaut Duty</button>
-      </div>
+      </p>
     </form>
   </section>
   <section class="post-result-section">
