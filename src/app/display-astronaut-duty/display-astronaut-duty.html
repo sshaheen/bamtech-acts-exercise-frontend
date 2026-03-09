@@ -3,7 +3,7 @@
   <p>Rank: {{ astronautDuty.rank }}</p>
   <p>Duty Title: {{ astronautDuty.dutyTitle }}</p>
   <p>Duty Start Date: {{ astronautDuty.dutyStartDate }}</p>
-  @if (astronautDuty.dutyEndDate !== '') {
+  @if (astronautDuty.dutyEndDate && astronautDuty.dutyEndDate !== '') {
     <p>Duty End Date: {{ astronautDuty.dutyEndDate }}</p>
   }
 </article>
